@@ -1,14 +1,19 @@
 package main
 
 import (
+	static "github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	r := gin.Default()
 
-	r.GET("/ping", func(c *gin.Context) {
-		c.String(200, "test")
+	r.Use(static.Serve("/", static.LocalFile("./public", true)))
+
+	r.GET("/ws", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
 	})
 
 	r.Run(":5000")
