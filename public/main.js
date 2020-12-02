@@ -33,9 +33,9 @@ function insertMessage(messageObj) {
 	console.log("name: " +messageObj.username + " content: " + messageObj.content)
 	message.textContent = `${messageObj.username}: ${messageObj.content}`
 
-	// Append the message to our chat div
+	// Append the message to chat div
 	messages.appendChild(message)
 
-	// Insert the message as the first message of our chat
+	// Insert the message as the last message in chat area
 	messages.insertBefore(messages.firstChild, messages)
 }
