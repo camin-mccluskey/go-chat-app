@@ -1,0 +1,7 @@
+.Nav_Container {
+  display: flex;
+}
+
+.Nav_Title {
+  flex-grow: 1;
+}
