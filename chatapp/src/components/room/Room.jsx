@@ -1,12 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './room.css';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  container: {
+    backgroundColor: "gray",
+    paddingLeft: "5px"
+  }, 
+  title: {
+    fontSize: "large"
+  }, 
+  subtitle: {
+    fontSize: "small"
+  }
+});
 
 export const Room = ({title, description}) => {
+  const classes = useStyles();
   return (
-    <div className='Room_Container'>
-      <p className='Room_Title'>{title}</p>
-      <p className='Room_Description'>{description}</p>
+    <div className={classes.container}>
+      <p className={classes.title}>{title}</p>
+      <p className={classes.subtitle}>{description}</p>
     </div>
   );
 };
