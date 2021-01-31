@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { Room } from './components/room/Room';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          React frontend
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Container">
+        <div className="ChatNav">
+          <Room title="9am in London" description="chatting about things"/>
+          <Room title="Midnight in New York" description="chatting about things"/> 
+        </div>
+        <div className="ChatArea">
+        </div>
+      </div>
     </div>
   );
 }

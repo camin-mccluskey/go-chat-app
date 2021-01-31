@@ -1,2 +1,8 @@
+# server
 go.sum
 main
+
+# client
+node_modules
+.storybook
+build

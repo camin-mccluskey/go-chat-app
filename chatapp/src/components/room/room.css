@@ -1,0 +1,12 @@
+.Room_Container {
+  background-color: rgb(204, 204, 204);
+}
+
+.Room_Title {
+  font-size: large;
+}
+
+.Room_Description {
+  font-size: small;
+  color: gray;
+}

@@ -10,7 +10,7 @@ func main() {
 	r := gin.Default()
 	m := melody.New()
 
-	r.Use(static.Serve("/", static.LocalFile("./public", true)))
+	r.Use(static.Serve("/", static.LocalFile("./chatapp/build", true)))
 
 	r.GET("/ws", func(c *gin.Context) {
 		m.HandleRequest(c.Writer, c.Request)
