@@ -17,7 +17,7 @@ export const Message = ({ content, fromUser }) => {
   const classes = useStyles(fromUser);
   return (
     <Paper className={classes.container} elevation={3}>
-      <p className="Message_Content">
+      <p>
         {content} 
       </p>
     </Paper>

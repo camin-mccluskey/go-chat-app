@@ -2,9 +2,13 @@
   font-family: Roboto, serif;
 }
 
+.App {
+  height: 100vh;
+}
+
 .Container { 
   display: flex;
-  height: 100vh;
+  height: 100%;
 }
 
 .ChatNav {
@@ -20,4 +24,10 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 10px 10px;
+}
+
+.ChatInput {
+  position: fixed;
+  bottom: 5px;
+  width: 70%;
 }
