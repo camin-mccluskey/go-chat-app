@@ -14,8 +14,10 @@ export const Input = ({ onSend }) => {
   const [message, setMessage] = useState('');
 
   const sendMessage = (message) => {
-    setMessage('');
-    onSend(message)
+    if (message) {
+      setMessage('');
+      onSend(message)
+    }
   } 
 
   const classes = useStyles();
