@@ -8,7 +8,7 @@ import './App.css';
 const USER_ID = 1;
 
 function App() {
-  const [messages, setMessages] = useState([]); 
+  const [messages, setMessages] = useState([{content: "Welcome to Go Chat app", author: 0}]); 
 
   return (
     <div className="App">
@@ -21,7 +21,6 @@ function App() {
         <div className="ChatArea">
           <div>
             {messages.map((msg, i) => {
-              
               return (
                 <Message content={msg.content} fromUser={msg.author === USER_ID} />
               );

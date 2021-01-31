@@ -12,20 +12,33 @@ const useStyles = makeStyles({
 
 export const Input = ({ onSend }) => {
   const [message, setMessage] = useState('');
+
+  const sendMessage = (message) => {
+    setMessage('');
+    onSend(message)
+  } 
+
   const classes = useStyles();
   return (
     <div className={classes.container}>
       <TextField
-          id="standard-full-width"
-          style={{ margin: 8 }}
-          fullWidth
-          margin="normal"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          onChange={(e) => setMessage(e.target.value)}
+        value={message}
+        id="standard-full-width"
+        style={{ margin: 8 }}
+        fullWidth
+        margin="normal"
+        InputLabelProps={{
+          shrink: true,
+        }}
+        onChange={(e) => setMessage(e.target.value)}
+        // captures enter key message submit
+        onKeyUp={(e) => {
+          if (e.key === 'Enter') {
+            sendMessage(message)
+          }
+        }}
       />
-      <IconButton onClick={() => onSend(message)} color="secondary" aria-label="send message">
+      <IconButton onClick={() => sendMessage(message)} color="secondary" aria-label="send message">
         <SendIcon />
       </IconButton>
     </div>
