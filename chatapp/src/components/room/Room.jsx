@@ -1,27 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Typography } from '@material-ui/core';
+
 
 const useStyles = makeStyles({
   container: {
     backgroundColor: "gray",
     paddingLeft: "5px"
-  }, 
-  title: {
-    fontSize: "large"
-  }, 
-  subtitle: {
-    fontSize: "small"
   }
 });
 
 export const Room = ({title, description}) => {
   const classes = useStyles();
   return (
-    <div className={classes.container}>
-      <p className={classes.title}>{title}</p>
-      <p className={classes.subtitle}>{description}</p>
-    </div>
+    <Grid container direction="column" className={classes.container}>
+      <Grid xs={6}>
+        <Typography variant="h5">{title}</Typography>
+      </Grid>
+      <Grid xs={6}>
+        <Typography variant="subtitle2">{description}</Typography>
+      </Grid>
+    </Grid>
   );
 };
 

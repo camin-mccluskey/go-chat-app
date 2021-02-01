@@ -14,7 +14,6 @@ const useStyles = makeStyles({
 export const Nav = () => {
   const classes = useStyles();
   return (
-    <div className={classes.container}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h4" className={classes.title}>
@@ -25,6 +24,5 @@ export const Nav = () => {
           </Button>
         </Toolbar>
       </AppBar>  
-    </div>
   );
 }

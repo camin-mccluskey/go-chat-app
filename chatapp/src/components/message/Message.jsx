@@ -7,7 +7,7 @@ const useStyles = makeStyles({
   container: {
     display: "flex",
     maxWidth: "45%",
-    paddingLeft: "5px",
+    padding: "2px",
     margin: "5px",
     background: (fromUser) => fromUser ? "blue" : "white"
   }
