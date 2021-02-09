@@ -1,4 +1,5 @@
 import React from 'react';
+import { Grid } from '@material-ui/core';
 import { Room } from './Room';
 
 export default {
@@ -6,7 +7,13 @@ export default {
   component: Room,
 };
 
-const Template = (args) => <Room {...args} />;
+const Template = (args) => {
+  return (
+    <Grid xs={3}>
+      <Room {...args} />
+    </Grid>
+  );
+}
 
 export const Primary = Template.bind({});
 Primary.args = {

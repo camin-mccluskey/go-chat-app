@@ -6,9 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   container: {
     display: "flex",
-    maxWidth: "45%",
-    padding: "2px",
-    margin: "5px",
     background: (fromUser) => fromUser ? "blue" : "white"
   }
 });

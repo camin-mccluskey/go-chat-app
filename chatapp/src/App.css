@@ -1,33 +1,42 @@
-* {
-  font-family: Roboto, serif;
-}
-
 .App {
+  display: grid;
+  grid-template-rows: 50px auto;
+  grid-template-columns: 30% auto;
+  grid-template-areas: "Nav Nav"
+                       "SideNav Chat";
+}
+
+.NavBar {
+  display: flex;
+  justify-content: flex-end;
+  grid-area: Nav;
+  background: linear-gradient(261.37deg, #1446A0 43.41%, rgba(20, 70, 160, 0.9) 58.47%);
+}
+
+.Login {
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 200;
+  font-size: 32px;
+  color: #FFFFFF;
+}
+
+
+.SideNav {
   height: 100vh;
+  grid-area: SideNav;
+  background-color: rgba(255, 255, 255, 0.431);  
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid red;
 }
 
-.Container { 
-  display: flex;
-  height: 100%;
-}
-
-.ChatNav {
-  background-color: rgb(129, 129, 129);
-  width: 25%;
-  padding: 10px;
-}
-
-.ChatArea {
-  background-color: rgb(107, 107, 107);
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 10px 10px;
-}
-
-.ChatInput {
-  position: fixed;
-  bottom: 5px;
-  width: 70%;
+.Chat {
+  grid-area: Chat;
+  background-color: rgba(255, 255, 255, 0.431);  
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid green;
 }
